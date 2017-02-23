@@ -6,7 +6,7 @@
 
 ### Punto 1 (Carpeta CAD_Macros)
 
-Para este ejercicio se va a retomar la herramienta CAD, la cual ya tiene implementadas las funcionalidades de transformación, e integra el patrón comando para dar soporte a las funciones de deshacer/rehacer.
+Para este ejercicio se va a retomar la herramienta CAD, la cual ya tiene implementadas las funcionalidades de transformación, e integra el patrón Comando para dar soporte a las funciones de deshacer/rehacer.
 
 Se quiere hace una mejora adicional: soporte para MACROS, similar a la que existe en herramientas como Excel y Photoshop. Una MACRO es una secuencia de acciones grabadas (por ahora grabadas sólo en memoria, y sólo UNA MACRO a la vez) que podrán repetirse tantas veces como se quiera. Cuando se activa la opción de 'grabar macro', se 'grabará' la secuencia de comandos que se realicen hasta cuando se elija la opción de 'detener grabación'. Cuando se haga esto último, se habilitará la opción de 'ejecutar macro', la cual repetirá las N acciones realizadas.
 
@@ -20,7 +20,7 @@ Por ejemplo, la siguiente secuencia de acciones debería ser viable una ves habi
 * Rotar la partes de la casa.
 * Ejecutar macro (dibuja de nuevo la casa, quendo dos casas)
 
-Plantee un uso alternativo del patrón comando (aprovechando que ya está implementado para el hacer/deshacer) para agregar esta funcionalidad. Tenga también en cuenta que sólo se puede grabar una MACRO a la vez, por lo que al hacer una nueva grabación, se sobreescribirá la MACRO anterior.
+Plantee un uso alternativo del patrón comando (aprovechando que ya está implementado para el hacer/deshacer) para agregar esta funcionalidad, haciendo uso de los métodos definidos en el controlador, y ya asociados a la interfaz gráfica. Tenga también en cuenta que sólo se puede grabar una MACRO a la vez, por lo que al hacer una nueva grabación, se sobreescribirá la MACRO anterior. 
 
 Nota: NO es necesario considerar las operaciones de deshacer/rehacer dentro de los MACROS (es decir, el 'deshacer/rehacer' no queda grabado en el MACRO). Sin embargo, si esto se logra, se dará un bono en la evaluación.
 
