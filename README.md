@@ -121,6 +121,8 @@ Se sabe que el método de eliminiación de duplicados tiene un par de defectos, 
  agregue, en los comentarios de la clase DeleteDuplicateTest las clases de equivalencia y condiciones de frontera que considere hacen falta tenerse en cuenta.
 2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los asserts los mensajes que indiquen claramente -en caso de que la prueba genere un fallo- cual es el defecto identificado para la lista.
 
+3. En la hoja de respuestas decriba clara, pero brevemente, que defectos tiene el TAD.
+
 ## Entrega
 
 Siga al pie de la letra estas indicaciones para la entrega de este punto. EL HACER CASO OMISO DE ESTAS INSTRUCCIONES PENALIZARÁ LA NOTA.
