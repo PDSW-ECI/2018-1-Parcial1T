@@ -4,6 +4,14 @@
 
 #### Nota: Se debe trabajar en Linux para no tener problemas con los comandos indicados al final.
 
+### Antes de iniciar
+
+Clone los fuentes de los tres puntos (no los descargue directamente!):
+
+```bash
+git clone https://gitlab.com/PDSW/2017-1-Parcial1T.git
+```
+
 ### Punto 1 (Carpeta CAD_Macros)
 
 Para este ejercicio se va a retomar la herramienta CAD, la cual ya tiene implementadas las funcionalidades de transformación, e integra el patrón Comando para dar soporte a las funciones de deshacer/rehacer.
