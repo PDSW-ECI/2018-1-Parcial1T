@@ -94,7 +94,7 @@ Se sabe que el método de eliminiación de duplicados tiene un par de defectos, 
  * 
  * CF1: Lista [E1]. TIPO: Frontera. Resultado esperado: Lista [E1]
  * CE1: Lista [E1,E2,E3,...,E(N)], donde E1!=E2!=E3...!=E(N). TIPO: Normal. Resultado esperado: Lista [E1,E2,E3,...,E(N)]
- * CE2: Lista [E1,E2,E2,[E3]], donde la sublista E3 no contiene a E2 TIPO: Normal. Resultado esperado: Lista [E1,[E3]]
+ * CE2: Lista [E1,E2,E2,[E3]], donde la sublista E3 no contiene a E2 TIPO: Normal. Resultado esperado: Lista [E1,E2,[E3]]
  * 
  */
 
