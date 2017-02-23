@@ -57,7 +57,7 @@ En la clase ExampleOfUse, se muestra un ejemplo de uso del 'AutocompleteAssistan
     int editingDistance(String word1, String word2);
 ```
 
-En el ejemplo, la instancia de AutocompleteAssistant está haciendo uso de 'StandardEditingDistanceEvaluator', pero se quiere hacer uso del evaluador de distancia de edición "LevensLevenshteinEditingDistanceEvaluator"
+En el ejemplo, la instancia de AutocompleteAssistant está haciendo uso de 'StandardEditingDistanceEvaluator', pero se quiere hacer uso del evaluador de distancia de edición "LevensLevenshteinEditingDistanceEvaluator", la cual redefine la especificación del método de la siguiente manera:
 
 ```java
     /**
