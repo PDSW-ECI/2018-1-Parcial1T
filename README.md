@@ -101,7 +101,24 @@ Se sabe que el método de eliminiación de duplicados tiene un par de defectos, 
 ```
 
 
-1. Agregue, en los comentarios de la clase DeleteDuplicateTest las clases de equivalencia y condiciones de frontera que considere hacen falta tenerse en cuenta.
+1. Teniendo en cuenta las especificaciones del método deleteDup():
+
+	```java
+    /**
+     * @obj Remueve los elementos duplicados de la lista
+     * @pre True
+     * @pos Para cada elemento E de la lista que este 2 o mas veces,
+     * la lista deja solo un elemento del mismo. Si los elementos
+     * repetidos no son contiguos (por ejemplo, el tercer, quinto y decimo
+     * elemento), la posicion donde se dejara el valor sera siempre
+     * la del elemento que estaba mas cerca de la cabeza de la lista
+     */
+    public void deleteDup()
+```
+
+
+
+ agregue, en los comentarios de la clase DeleteDuplicateTest las clases de equivalencia y condiciones de frontera que considere hacen falta tenerse en cuenta.
 2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los asserts los mensajes que indiquen claramente -en caso de que la prueba genere un fallo- cual es el defecto identificado para la lista.
 
 ## Entrega
