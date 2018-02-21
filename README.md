@@ -9,16 +9,26 @@
 Clone los fuentes de los tres puntos (no los descargue directamente!):
 
 ```bash
-git clone https://gitlab.com/PDSW/2017-1-Parcial1T.git
+git clone https://gitlab.com/PDSW/2018-1-Parcial-1T.git
 ```
 
 ### Punto 1 (Carpeta CAD_Macros)
 
-Para este ejercicio se va a retomar la herramienta CAD, la cual ya tiene implementadas las funcionalidades de transformación, e integra el patrón Comando para dar soporte a las funciones de deshacer/rehacer.
+Para este ejercicio se va a retomar la herramienta CAD, la cual ya tiene
+implementadas las funcionalidades de transformación, e integra el patrón Comando
+para dar soporte a las funciones de deshacer/rehacer.
 
-Se quiere hace una mejora adicional: soporte para MACROS, similar a la que existe en herramientas como Excel y Photoshop. Una MACRO es una secuencia de acciones grabadas (por ahora grabadas sólo en memoria, y sólo UNA MACRO a la vez) que podrán repetirse tantas veces como se quiera. Cuando se activa la opción de 'grabar macro', se 'grabará' la secuencia de comandos que se realicen hasta cuando se elija la opción de 'detener grabación'. Cuando se haga esto último, se habilitará la opción de 'ejecutar macro', la cual repetirá las N acciones realizadas.
+Se quiere hace una mejora adicional: soporte para MACROS, similar a la que
+existe en herramientas como Excel y Photoshop. Una MACRO es una secuencia de
+acciones grabadas (por ahora grabadas sólo en memoria, y sólo UNA MACRO a la
+vez) que podrán repetirse tantas veces como se quiera. Cuando se activa la
+opción de 'grabar macro', se 'grabará' la secuencia de comandos que se realicen
+hasta cuando se elija la opción de 'detener grabación'. Cuando se haga esto
+último, se habilitará la opción de 'ejecutar macro', la cual repetirá las N
+acciones realizadas.
 
-Por ejemplo, la siguiente secuencia de acciones debería ser viable una ves habilitada esta funcionalidad:
+Por ejemplo, la siguiente secuencia de acciones debería ser viable una ves
+habilitada esta funcionalidad:
 
 * Activar grabación de macros.
 * Dibujar una casa.
@@ -28,19 +38,33 @@ Por ejemplo, la siguiente secuencia de acciones debería ser viable una ves habi
 * Rotar la partes de la casa.
 * Ejecutar macro (dibuja de nuevo la casa, quendo dos casas)
 
-Plantee un uso alternativo del patrón comando (aprovechando que ya está implementado para el hacer/deshacer) para agregar esta funcionalidad, haciendo uso de los métodos definidos en el controlador, y ya asociados a la interfaz gráfica. Tenga también en cuenta que sólo se puede grabar una MACRO a la vez, por lo que al hacer una nueva grabación, se sobreescribirá la MACRO anterior. 
+Plantee un uso alternativo del patrón comando (aprovechando que ya está
+implementado para el hacer/deshacer) para agregar esta funcionalidad, haciendo
+uso de los métodos definidos en el controlador, y ya asociados a la interfaz
+gráfica. Tenga también en cuenta que sólo se puede grabar una MACRO a la vez,
+por lo que al hacer una nueva grabación, se sobreescribirá la MACRO anterior.
 
-Nota: NO es necesario considerar las operaciones de deshacer/rehacer dentro de los MACROS (es decir, el 'deshacer/rehacer' no queda grabado en el MACRO). Sin embargo, si esto se logra, se dará un bono en la evaluación.
+Nota: NO es necesario considerar las operaciones de deshacer/rehacer dentro de
+los MACROS (es decir, el 'deshacer/rehacer' no queda grabado en el MACRO). Sin
+embargo, si esto se logra, se dará un bono en la evaluación.
 
 
 
 ### Punto 2 (Carpeta NLangUtils-SpellChecker)
 
-La clase 'AutocompleteAssistant' es un módulo de una librería que puede ser utilizada en herramientas que requieran la edición de texto, tales como procesadores de palabras o clientes de correo. Dicha librería depende de un evaluador de "distancia de edición", una medida que define el grado de similitud de dos palabras, y que indica aproximadamente cuantas operaciones de inserción y borrado se requieren para convertir la palabra 1 en la palabra 2.
+La clase 'AutocompleteAssistant' es un módulo de una librería que puede ser
+utilizada en herramientas que requieran la edición de texto, tales como
+procesadores de palabras o clientes de correo. Dicha librería depende de un
+evaluador de "distancia de edición", una medida que define el grado de similitud
+de dos palabras, y que indica aproximadamente cuantas operaciones de inserción y
+borrado se requieren para convertir la palabra 1 en la palabra 2.
 
 ![](img/model-nlang.png)
 
-En la clase ExampleOfUse, se muestra un ejemplo de uso del 'AutocompleteAssistant', el cual, como se ve en el diagrama, depende de la interfaz 'EditingDistanceEvaluator', la cual tiene la siguiente especificación para el método 'editingDistance':
+En la clase ExampleOfUse, se muestra un ejemplo de uso del
+'AutocompleteAssistant', el cual, como se ve en el diagrama, depende de la
+interfaz 'EditingDistanceEvaluator', la cual tiene la siguiente especificación
+para el método 'editingDistance':
 
 ```java
     /**
@@ -57,7 +81,10 @@ En la clase ExampleOfUse, se muestra un ejemplo de uso del 'AutocompleteAssistan
     int editingDistance(String word1, String word2);
 ```
 
-En el ejemplo, la instancia de AutocompleteAssistant está haciendo uso de 'StandardEditingDistanceEvaluator', pero se quiere hacer uso del evaluador de distancia de edición "LevensLevenshteinEditingDistanceEvaluator", la cual redefine la especificación del método de la siguiente manera:
+En el ejemplo, la instancia de AutocompleteAssistant está haciendo uso de
+'StandardEditingDistanceEvaluator', pero se quiere hacer uso del evaluador de
+distancia de edición "LevensLevenshteinEditingDistanceEvaluator", la cual
+redefine la especificación del método de la siguiente manera:
 
 ```java
     /**
@@ -74,18 +101,26 @@ En el ejemplo, la instancia de AutocompleteAssistant está haciendo uso de 'Stan
     public int editingDistance(String word1, String word2) {
 ```
 
-1. Revise y anote en su hoja de respuestas (archivo RESPUESTAS.txt). Qué principio S.O.L.I.D. está relacionado con los errores que se producen al cambiar StandardEditingDistanceEvaluator por LevenshteinEditingDistanceEvaluator?. Que patrón sería aplicable para resolver el problema, y poder hacer uso de LevenshteinEditingDistanceEvaluator?
+1. Revise y anote en su hoja de respuestas (archivo RESPUESTAS.txt). Qué
+   principio S.O.L.I.D. está relacionado con los errores que se producen al
+   cambiar StandardEditingDistanceEvaluator por
+   LevenshteinEditingDistanceEvaluator?. Que patrón sería aplicable para
+   resolver el problema, y poder hacer uso de
+   LevenshteinEditingDistanceEvaluator?
 
 2. Implemente la solución antes indicada.
-
-
 
 ### Punto 3 (Carpeta LinkedListTesting)
 
 
-La clase MisteryList es una implementación del TAD Lista Encadenada. Esta lista tiene la particularidad de sólo permitir la inserción en la cabeza de la lista (headInsert), y de ofrecer operaciones como la eliminiación de duplicados.
+La clase MisteryList es una implementación del TAD Lista Encadenada. Esta lista
+tiene la particularidad de sólo permitir la inserción en la cabeza de la lista
+(headInsert), y de ofrecer operaciones como la eliminiación de duplicados.
 
-Se sabe que el método de eliminiación de duplicados tiene un par de defectos, pero el código está 'obfuscado' y las pruebas implementadas hasta el momento (basadas en dos clases de equivalencia y una condición de frontera) no arrojan aún pistas al respecto:
+Se sabe que el método de eliminiación de duplicados tiene un par de defectos,
+pero el código está 'obfuscado' y las pruebas implementadas hasta el momento
+(basadas en dos clases de equivalencia y una condición de frontera) no arrojan
+aún pistas al respecto:
 
 ```java
 /**
@@ -100,7 +135,6 @@ Se sabe que el método de eliminiación de duplicados tiene un par de defectos, 
 
 ```
 
-
 1. Teniendo en cuenta las especificaciones del método deleteDup():
 
 	```java
@@ -114,18 +148,22 @@ Se sabe que el método de eliminiación de duplicados tiene un par de defectos, 
      * la del elemento que estaba mas cerca de la cabeza de la lista
      */
     public void deleteDup()
-```
+    ```
 
-
-
- agregue, en los comentarios de la clase DeleteDuplicateTest las clases de equivalencia y condiciones de frontera que considere hacen falta tenerse en cuenta.
-2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los asserts los mensajes que indiquen claramente -en caso de que la prueba genere un fallo- cual es el defecto identificado para la lista.
+ agregue, en los comentarios de la clase DeleteDuplicateTest las clases de
+ equivalencia y condiciones de frontera que considere hacen falta tenerse en
+ cuenta.
+ 
+2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los
+   asserts los mensajes que indiquen claramente -en caso de que la prueba genere
+   un fallo- cual es el defecto identificado para la lista.
 
 3. En la hoja de respuestas decriba clara, pero brevemente, que defectos tiene el TAD.
 
 ## Entrega
 
-Siga al pie de la letra estas indicaciones para la entrega de este punto. EL HACER CASO OMISO DE ESTAS INSTRUCCIONES PENALIZARÁ LA NOTA.
+Siga al pie de la letra estas indicaciones para la entrega de este punto. EL
+HACER CASO OMISO DE ESTAS INSTRUCCIONES PENALIZARÁ LA NOTA.
 
 1. Limpie los tres proyectos
 
@@ -140,7 +178,8 @@ $ git config --global user.name "Juan Perez"
 $ git config --global user.email juan.perez@escuelaing.edu.co
 ```
 
-2. Desde el directorio raíz (donde está este archivo README.md), haga commit de lo realizado.
+2. Desde el directorio raíz (donde está este archivo README.md), haga commit de
+   lo realizado.
 
 	```bash
 $ git add .
@@ -148,7 +187,8 @@ $ git commit -m "entrega parcial - Juan Perez"
 ```
 
 
-3. Desde este mismo directorio, comprima todo con: (no olvide el punto al final en la segunda instrucción)
+3. Desde este mismo directorio, comprima todo con: (no olvide el punto al final
+   en la segunda instrucción)
 
 	```bash
 $ zip -r APELLIDO.NOMBRE.zip .
