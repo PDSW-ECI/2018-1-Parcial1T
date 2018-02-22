@@ -106,7 +106,7 @@ redefine la especificación del método de la siguiente manera:
    cambiar StandardEditingDistanceEvaluator por
    LevenshteinEditingDistanceEvaluator?. Que patrón sería aplicable para
    resolver el problema, y poder hacer uso de
-   LevenshteinEditingDistanceEvaluator?
+   LevenshteinEditingDistanceEvaluator sin que se generen errores?
 
 2. Implemente la solución antes indicada.
 
@@ -154,9 +154,7 @@ aún pistas al respecto:
  equivalencia y condiciones de frontera que considere hacen falta tenerse en
  cuenta.
  
-2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los
-   asserts los mensajes que indiquen claramente -en caso de que la prueba genere
-   un fallo- cual es el defecto identificado para la lista.
+2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los asserts los mensajes que indiquen claramente -en caso de que la prueba genere un fallo- cual es el defecto identificado para la lista.
 
 3. En la hoja de respuestas decriba clara, pero brevemente, que defectos tiene el TAD.
 
@@ -168,31 +166,30 @@ HACER CASO OMISO DE ESTAS INSTRUCCIONES PENALIZARÁ LA NOTA.
 1. Limpie los tres proyectos
 
 	```bash
-$ mvn clean
-```
+    $ mvn clean
+    ```
 
 1. Configure su usuario de GIT
 
 	```bash
-$ git config --global user.name "Juan Perez"
-$ git config --global user.email juan.perez@escuelaing.edu.co
-```
+    $ git config --global user.name "Juan Perez"
+    $ git config --global user.email juan.perez@escuelaing.edu.co
+    ```
 
 2. Desde el directorio raíz (donde está este archivo README.md), haga commit de
    lo realizado.
 
 	```bash
-$ git add .
-$ git commit -m "entrega parcial - Juan Perez"
-```
+    $ git add .
+    $ git commit -m "entrega parcial - Juan Perez"
+    ```
 
 
-3. Desde este mismo directorio, comprima todo con: (no olvide el punto al final
-   en la segunda instrucción)
+3. Desde este mismo directorio, comprima todo con: (no olvide el punto al final de la instrucción)
 
 	```bash
-$ zip -r APELLIDO.NOMBRE.zip .
-```
+    $ zip -r APELLIDO.NOMBRE.zip .
+    ```
 4. Abra el archivo ZIP creado, y rectifique que contenga lo desarrollado.
 
 4. Suba el archivo antes creado (APELLIDO.NOMBRE.zip) en el espacio de moodle correspondiente.
