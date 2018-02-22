@@ -150,9 +150,10 @@ aún pistas al respecto:
     public void deleteDup()
     ```
 
- agregue, en los comentarios de la clase DeleteDuplicateTest las clases de
- equivalencia y condiciones de frontera que considere hacen falta tenerse en
- cuenta.
+    agregue, en los comentarios de la clase DeleteDuplicateTest las clases de
+    equivalencia y condiciones de frontera que considere hacen falta tenerse en
+    cuenta.
+    
  
 2. Implemente las pruebas correspondientes, teniendo cuidado de dejar en los asserts los mensajes que indiquen claramente -en caso de que la prueba genere un fallo- cual es el defecto identificado para la lista.
 
